@@ -43,7 +43,7 @@ class DetailViewController: UIViewController {
 //        let vc = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: [])
 //        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
 //        present(vc, animated: true)
-        if let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook) {
+        if let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter) {
             vc.setInitialText("Look at this great picture!")
             vc.add(imageView.image!)
             vc.add(URL(string: "http://www.photolib.noaa.gov/nssl"))
