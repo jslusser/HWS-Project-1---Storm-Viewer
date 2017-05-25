@@ -1,10 +1,11 @@
 //
 //  DetailViewController.swift
-//  Project1
+//  Project1 + Project 3
 //
 //  Created by James Slusser on 5/18/17.
 //  Copyright © 2017 James Slusser. All rights reserved.
 //  https://www.hackingwithswift.com/read/1/overview
+//  https://www.hackingwithswift.com/read/3/overview
 //
 
 import UIKit
@@ -22,6 +23,8 @@ class DetailViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     title = selectedImage
+        
+         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action , target: self, action: #selector(shareTapped))
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +37,12 @@ class DetailViewController: UIViewController {
         navigationController?.hidesBarsOnTap = false
     }
 
+    func shareTapped() {
+        let vc = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
