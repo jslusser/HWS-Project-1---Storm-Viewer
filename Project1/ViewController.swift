@@ -1,10 +1,11 @@
 //
 //  ViewController.swift
-//  Project1
+//  Project1 + Project 3
 //
 //  Created by James Slusser on 5/18/17.
 //  Copyright © 2017 James Slusser. All rights reserved.
 //  https://www.hackingwithswift.com/read/1/overview
+//  https://www.hackingwithswift.com/read/3/overview
 //
 
 import UIKit
