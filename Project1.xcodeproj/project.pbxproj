@@ -23,6 +23,8 @@
 		940E662E1ECD836600384FBC /* nssl0051.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 940E66241ECD836600384FBC /* nssl0051.jpg */; };
 		940E662F1ECD836600384FBC /* nssl0091.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 940E66251ECD836600384FBC /* nssl0091.jpg */; };
 		940E66311ECD8F2000384FBC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E66301ECD8F2000384FBC /* DetailViewController.swift */; };
+		9473669A207125D300F560E3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94736698207125D300F560E3 /* Crashlytics.framework */; };
+		9473669B207125D300F560E3 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94736699207125D300F560E3 /* Fabric.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		940E66241ECD836600384FBC /* nssl0051.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0051.jpg; sourceTree = "<group>"; };
 		940E66251ECD836600384FBC /* nssl0091.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0091.jpg; sourceTree = "<group>"; };
 		940E66301ECD8F2000384FBC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		94736698207125D300F560E3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		94736699207125D300F560E3 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9473669A207125D300F560E3 /* Crashlytics.framework in Frameworks */,
+				9473669B207125D300F560E3 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,8 @@
 		940E66081ECD81B700384FBC /* Project1 */ = {
 			isa = PBXGroup;
 			children = (
+				94736698207125D300F560E3 /* Crashlytics.framework */,
+				94736699207125D300F560E3 /* Fabric.framework */,
 				940E66091ECD81B700384FBC /* AppDelegate.swift */,
 				940E660B1ECD81B700384FBC /* ViewController.swift */,
 				940E66301ECD8F2000384FBC /* DetailViewController.swift */,
@@ -115,6 +123,7 @@
 				940E66021ECD81B700384FBC /* Sources */,
 				940E66031ECD81B700384FBC /* Frameworks */,
 				940E66041ECD81B700384FBC /* Resources */,
+				947366972071253600F560E3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -182,6 +191,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		947366972071253600F560E3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 31fd85b49656a3fdf23b8edb3921cfb71b138c38 6a54b13348349ac7e65bd008eadf1ea33ff3ea14192add45f9bf8e4be5a10cad";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		940E66021ECD81B700384FBC /* Sources */ = {
@@ -316,6 +341,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K373EY5YU9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Project1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.kurkuma.Project1;
@@ -329,6 +358,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K373EY5YU9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Project1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.kurkuma.Project1;
@@ -356,6 +389,7 @@
 				940E661A1ECD81B700384FBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
