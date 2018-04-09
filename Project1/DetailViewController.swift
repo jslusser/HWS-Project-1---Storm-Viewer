@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
 
     var selectedImage: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let imageToLoad = selectedImage {
@@ -25,8 +24,7 @@ class DetailViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     title = selectedImage
-        
-         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action , target: self, action: #selector(shareTapped))
+         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,14 +47,11 @@ class DetailViewController: UIViewController {
             vc.add(URL(string: "http://www.photolib.noaa.gov/nssl"))
             present(vc, animated: true)
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
+        
+        func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -67,4 +62,5 @@ class DetailViewController: UIViewController {
     }
     */
 
+}
 }
